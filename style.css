@@ -11,7 +11,6 @@ header {
   width: 180px;
   height: 40px;
   margin: 20px;
-  font-family: "Shrikhand", serif;
 }
 
 .location {
@@ -31,12 +30,17 @@ header {
   background-color: rgb(232, 227, 227);
 }
 .h3 {
-  font-size: small;
+  display: block;
+  font-family: serif thin;
+  font-size: 1rem;
   font-weight: 90;
+  color: black;
+  padding-bottom: 20px;
 }
 .explore {
   display: flex;
   align-items: center;
+  justify-content: center;
   width: 200px;
   height: 50px;
   padding: 10px 10px;
@@ -79,10 +83,18 @@ header {
   flex-basis: 30%;
 }
 
+.buttons:hover {
+  background-color: rgb(243, 228, 243);
+}
+
 .iconf {
   margin: 10px;
 }
-.buttons .iconf::before {
+.list {
+  list-style: none;
+  counter-reset: li;
+}
+.list .buttons::before {
   content: counter(li);
   counter-increment: li;
   background: #9356dc;
@@ -134,11 +146,15 @@ body {
 
 .image {
   display: flex;
-  width: 98%;
+  width: 100%;
   height: 185px;
   object-fit: cover;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
+}
+.image1 {
+  position: relative;
+  text-align: center;
 }
 .caption {
   display: flex;
@@ -152,18 +168,56 @@ body {
 }
 .rating {
   display: flex;
+  padding-top: 30px;
+  transform: scale(2);
 }
-.rating [data-active="true"] {
+.rating:hover {
+  fill: #9356dc;
   color: #9356dc;
-  cursor: pointer;
 }
-.rating [data-active="false"] {
-  color: lightgray;
+
+.newtag {
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  background-attachment: scroll;
+  background-clip: border-box;
+  background-color: rgb(153, 226, 208);
+  background-image: none;
+  background-origin: padding-box;
+  background-position-x: 0%;
+  background-position-y: 0%;
+  background-size: auto;
+  color: green;
+  cursor: pointer;
+  font-family: Roboto, sans-serif;
+  font-size: 18px;
+  font-weight: 1000;
+  height: 19px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 0px;
+  padding-bottom: 15px;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 8px;
+  position: absolute;
+  right: 10px;
+  text-decoration-thickness: auto;
+  top: 10px;
+  width: 31px;
+  border-radius: 4px;
 }
 
 .footer {
   background-color: rgb(50, 54, 54);
   color: white;
+}
+.name {
+  font-family: "shrikhand";
+  padding-left: 4px;
 }
 .endcontainor {
   flex-direction: column;
@@ -174,6 +228,10 @@ body {
 ul {
   list-style: none;
   line-height: 2;
+}
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .footer-col {
@@ -204,7 +262,6 @@ ul {
     width: 180px;
     height: 40px;
     margin: 20px;
-    font-family: "Shrikhand", serif;
   }
 
   .location {
@@ -230,9 +287,10 @@ ul {
   .explore {
     display: flex;
     align-items: center;
+    justify-content: center;
     width: 250px;
     height: 50px;
-    padding: 10px 10px;
+    padding: 20px 20px;
     font-size: 1.2rem;
     color: #fff;
     border: 0;
@@ -245,7 +303,12 @@ ul {
     margin-left: 8px;
     font-family: "Shrikhand", serif;
   }
-
+  .list {
+    list-style: none;
+    counter-reset: li;
+    display: flex;
+    padding: 5px;
+  }
   .steps {
     display: flex;
     width: 100%;
@@ -254,8 +317,9 @@ ul {
     column-gap: 8px;
     padding-bottom: 20px;
   }
+
   .buttons {
-    margin: 8px;
+    margin: 20px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -321,13 +385,6 @@ ul {
   .rating {
     display: flex;
   }
-  .rating [data-active="true"] {
-    color: #9356dc;
-    cursor: pointer;
-  }
-  .rating [data-active="false"] {
-    color: lightgray;
-  }
 
   .footer {
     background-color: rgb(50, 54, 54);
@@ -371,10 +428,9 @@ ul {
     justify-content: center;
   }
   #logo {
-    width: 180px;
-    height: 40px;
-    margin: 20px;
-    font-family: "Shrikhand", serif;
+    width: 300px;
+    height: 80px;
+    margin: 40px;
   }
 
   .location {
@@ -400,9 +456,10 @@ ul {
   .explore {
     display: flex;
     align-items: center;
+    justify-content: center;
     width: 250px;
     height: 50px;
-    padding: 10px 10px;
+    padding: 20px 20px;
     font-size: 1.2rem;
     color: #fff;
     border: 0;
@@ -415,7 +472,12 @@ ul {
     margin-left: 8px;
     font-family: "Shrikhand", serif;
   }
-
+  .list {
+    list-style: none;
+    counter-reset: li;
+    display: flex;
+    padding: 5px;
+  }
   .steps {
     display: flex;
     width: 100%;
@@ -424,8 +486,12 @@ ul {
     column-gap: 8px;
     padding-bottom: 20px;
   }
+  .ol .li .buttons {
+    display: flex;
+    flex-direction: row;
+  }
   .buttons {
-    margin: 8px;
+    margin: 60px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -472,7 +538,7 @@ ul {
 
   .image {
     display: flex;
-    width: 98%;
+    width: 100%;
     height: 185px;
     object-fit: cover;
     border-top-left-radius: 20px;
@@ -491,13 +557,6 @@ ul {
   .rating {
     display: flex;
   }
-  .rating [data-active="true"] {
-    color: #9356dc;
-    cursor: pointer;
-  }
-  .rating [data-active="false"] {
-    color: lightgray;
-  }
 
   .footer {
     background-color: rgb(50, 54, 54);
@@ -514,9 +573,14 @@ ul {
     line-height: 2;
   }
   .footer-col {
-    width: 50%;
+    width: 100%;
     padding: 0px 15px;
     font-size: 20px;
     align-content: center;
+  }
+  .name {
+    font-family: "shrikhand";
+    font-size: 50px;
+    padding-left: 20px;
   }
 }
