@@ -24,6 +24,8 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;1,400&family=Shrikhand&display=swap"
       rel="stylesheet"
     />
+    <!--screen-->
+    <style type="text/css"></style>
   </head>
   <body>
     <header>
@@ -63,6 +65,7 @@
         </li>
       </ol>
     </article>
+    <!--screen-->
 
     <!--box01-->
     <div class="flex-container">
@@ -155,6 +158,23 @@
         </div>
       </div>
     </div>
+    <!--screen cover-->
+    <div class="overlay" id="overlay">
+      <div class="popup">
+        <h2>welcome</h2>
+        <p>choose your favorite dish now!</p>
+        <button onclick="closePopup()">Close</button>
+      </div>
+    </div>
+    <button onclick="openPopup()">More</button>
+    <script>
+      function openPopup() {
+        document.getElementById("overlay").style.display = "block";
+      }
+      function closePopup() {
+        document.getElementById("overlay").style.display = "none";
+      }
+    </script>
 
     <!--footer info-->
     <footer>
