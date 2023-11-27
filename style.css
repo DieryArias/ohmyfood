@@ -1,4 +1,63 @@
 /* mobile/Main styles here*/
+/* screen cover*/
+body {
+  animation: fadeInAnimation ease 10s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+.loading {
+  display: flex;
+  padding-left: 120px;
+}
+.loading span {
+  width: 35px;
+  height: 35px;
+  margin: 0 5px;
+  background-color: #9356dc;
+  border-radius: 50%;
+  display: inline-block;
+  animation-name: dots;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+.loading span:nth-child(2) {
+  background-color: #ff79da;
+  animation-delay: 0.4s;
+}
+.loading span:nth-child(3) {
+  background-color: #99e2d0;
+  animation-delay: 0.8s;
+}
+@keyframes dots {
+  50% {
+    opacity: 0;
+    transform: scale(0.7) translateY(10px);
+  }
+}
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInAndOut {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1);
+  }
+}
 
 header {
   flex-direction: row;
@@ -168,13 +227,42 @@ body {
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
 }
+/*HEARTS*/
+.heart {
+  position: relative;
+}
 .rating {
   display: flex;
-  padding-top: 30px;
+  padding-top: 45px;
+  padding-left: 0px;
   transform: scale(2);
 }
 .rating:hover {
   fill: #9356dc;
+  color: #9356dc;
+}
+.rating2 {
+  display: flex;
+  padding-top: 45px;
+  padding-left: 0px;
+  transform: scale(2);
+  color: #9356dc;
+  opacity: 0;
+}
+.rating,
+.rating2 {
+  position: absolute;
+  top: 0;
+  left: -30px;
+  width: 1px;
+  height: 100px;
+  transition: opacity 0.3s ease-in-out;
+}
+.heart:hover .rating {
+  opacity: 0;
+}
+.heart:hover .rating2 {
+  opacity: 1;
   color: #9356dc;
 }
 
@@ -213,22 +301,7 @@ body {
   border-radius: 4px;
 }
 
-/* screen cover*/
-body {
-  animation: fadeInAnimation ease 3s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-}
-
-@keyframes fadeInAnimation {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
+/*FOOTER*/
 .footer {
   background-color: rgb(50, 54, 54);
   color: white;
@@ -276,6 +349,9 @@ a {
     width: 180px;
     height: 40px;
     margin: 20px;
+  }
+  .loading {
+    padding-left: 350px;
   }
 
   .location {
@@ -396,8 +472,43 @@ a {
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
   }
+  /*HEARTS*/
+  .heart {
+    position: relative;
+  }
   .rating {
     display: flex;
+    padding-top: 45px;
+    padding-left: 0px;
+    transform: scale(2);
+  }
+  .rating:hover {
+    fill: #9356dc;
+    color: #9356dc;
+  }
+  .rating2 {
+    display: flex;
+    padding-top: 45px;
+    padding-left: 0px;
+    transform: scale(2);
+    color: #9356dc;
+    opacity: 0;
+  }
+  .rating,
+  .rating2 {
+    position: absolute;
+    top: 0;
+    left: -30px;
+    width: 1px;
+    height: 100px;
+    transition: opacity 0.3s ease-in-out;
+  }
+  .heart:hover .rating {
+    opacity: 0;
+  }
+  .heart:hover .rating2 {
+    opacity: 1;
+    color: #9356dc;
   }
 
   .footer {
@@ -449,6 +560,9 @@ a {
     align-items: center;
     background-color: #f2f2f2;
     height: 300px;
+  }
+  .loading {
+    padding-left: 750px;
   }
 
   .lns {
@@ -563,8 +677,44 @@ a {
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
   }
+
+  /*HEARTS*/
+  .heart {
+    position: relative;
+  }
   .rating {
     display: flex;
+    padding-top: 45px;
+    padding-left: 0px;
+    transform: scale(2);
+  }
+  .rating:hover {
+    fill: #9356dc;
+    color: #9356dc;
+  }
+  .rating2 {
+    display: flex;
+    padding-top: 45px;
+    padding-left: 0px;
+    transform: scale(2);
+    color: #9356dc;
+    opacity: 0;
+  }
+  .rating,
+  .rating2 {
+    position: absolute;
+    top: 0;
+    left: -30px;
+    width: 1px;
+    height: 100px;
+    transition: opacity 0.3s ease-in-out;
+  }
+  .heart:hover .rating {
+    opacity: 0;
+  }
+  .heart:hover .rating2 {
+    opacity: 1;
+    color: #9356dc;
   }
 
   .footer {
