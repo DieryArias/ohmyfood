@@ -5,6 +5,7 @@ body {
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
 }
+
 .overlay {
   position: fixed;
   top: 0;
@@ -12,9 +13,10 @@ body {
   width: 100%;
   height: 100%;
   background-color: white;
-  opacity: 1;
+  opacity: 2;
   z-index: 9999;
-  animation: fadeOut 15s forwards;
+  animation: fadeOut 20s forwards;
+  text-align: center;
 }
 
 @keyframes fadeOut {
@@ -31,7 +33,7 @@ body {
   display: flex;
   padding: 120px;
   margin-top: 200px;
-  animation: fadeOutAnimation ease 5s;
+  animation: fadeOutAnimation ease 10s;
   position: fixed;
   top: 0;
   width: 100%;
@@ -44,30 +46,30 @@ body {
 .loading span {
   width: 35px;
   height: 35px;
-  margin: 0 5px;
+  margin: 0px 5px;
   background-color: #9356dc;
   border-radius: 50%;
   display: inline-block;
   inset: 0;
   pointer-events: none;
   animation-name: dots;
-  animation-duration: 3s;
+  animation-duration: 1s;
   animation-iteration-count: 3;
   animation-timing-function: ease-in-out;
   animation-fill-mode: forwards, none;
 }
 .loading span:nth-child(2) {
   background-color: #ff79da;
-  animation-delay: 0.4s;
+  animation-delay: 0.2s;
 }
 .loading span:nth-child(3) {
   background-color: #99e2d0;
-  animation-delay: 0.8s;
+  animation-delay: 0.3s;
 }
 @keyframes dots {
   50% {
     opacity: 0;
-    transform: scale(0.7) translateY(10px);
+    transform: scale(0.5) translateY(5px);
   }
 }
 @keyframes fadeInAnimation {
@@ -94,6 +96,7 @@ header {
   display: flex;
   justify-content: center;
   transition: 0.3s;
+  padding-bottom: 50px;
 }
 
 #logo {
@@ -255,6 +258,8 @@ body {
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
 }
+
+/**********************************/
 /*HEARTS*/
 .heart {
   position: relative;
@@ -363,6 +368,223 @@ a {
   font-size: medium;
   margin-bottom: 200px;
   align-content: center;
+}
+
+/***************************SUBPAGES  PHONES*******************/
+
+.Order {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 50px;
+  padding: 10px 10px;
+  font-size: 1rem;
+  color: #fff;
+  border: 0;
+  border-radius: 50px;
+  background: linear-gradient(#ff79da, #9356dc);
+  cursor: pointer;
+}
+.buttons {
+  margin: 8px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px 10px;
+  position: relative;
+  background: #ffffff;
+  font-weight: bold;
+  padding: 2rem;
+  margin: 1rem;
+  background: #f2f2f2;
+  box-shadow: inset -5px -5px #e6e6e6;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  flex-basis: 30%;
+}
+
+.buttons:hover {
+  background-color: rgb(243, 228, 243);
+}
+.checkmark,
+.menuitemicon {
+  height: 1.6rem;
+  width: 1.6rem;
+  background-color: #99e2d0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100px;
+  transform: rotate(0deg);
+  transition-duration: 0.5s;
+}
+
+.menuitem {
+  background-color: #fff;
+  padding: 1rem;
+  display: flex;
+  border-radius: 0.75rem;
+  margin: 1rem 0;
+  box-shadow: 0.25rem 0.25rem 1rem rgb(0 0 0 / 10%);
+  overflow: hidden;
+  cursor: pointer;
+  animation: itemAppear 0.6s;
+  animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+  animation-fill-mode: both;
+  transform: scale(0);
+  max-width: 100%;
+}
+@keyframes itemAppear {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.heroimg {
+  max-width: 100%;
+  max-height: 32rem;
+  width: 100%;
+  object-fit: cover;
+  z-index: 3;
+}
+.containermenu {
+  margin-top: -4rem;
+  border-radius: 2rem 2rem 0 0;
+  background-color: #f6f6f6;
+  z-index: 3;
+  position: relative;
+}
+
+.name2 {
+  font-family: "shrikhand";
+  padding-left: 4px;
+  padding-top: 50px;
+  border-top-right-radius: 15%;
+  border-bottom-left-radius: 15%;
+}
+
+.menuheader {
+  display: flex;
+  height: 90px;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  border-top-right-radius: 25%;
+  border-top-left-radius: 25%;
+  z-index: 2;
+  margin-top: -15%;
+  background-color: #f6f6f6;
+  position: absolute;
+}
+
+h2 {
+  display: block;
+  font-size: 1.5em;
+  margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+}
+
+.submenus {
+  display: grid;
+}
+.submenu {
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0 2rem;
+}
+
+section {
+  display: block;
+}
+
+section {
+  display: block;
+}
+
+.submenutitle {
+  text-transform: uppercase;
+  position: relative;
+  padding-bottom: 0.5rem;
+  font-weight: 400;
+  padding-top: 90px;
+}
+
+h3 {
+  display: block;
+  font-size: 1.17em;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+}
+
+.submenutitle:after {
+  content: "";
+  width: 3rem;
+  height: 0.25rem;
+  background-color: #99e2d0;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.checkmark {
+  display: flex;
+  overflow-x: hidden;
+  width: 60px;
+  text-overflow: clip;
+  text-overflow: ellipsis ellipsis;
+  text-overflow: ellipsis "[..]";
+}
+
+section {
+  display: block;
+}
+
+.delay-0 {
+  animation-delay: 0.1s;
+}
+.delay-1 {
+  animation-delay: 0.2s;
+}
+.delay-2 {
+  animation-delay: 0.3s;
+}
+
+.delay-3 {
+  animation-delay: 0.4s;
+}
+.delay-4 {
+  animation-delay: 0.5s;
+}
+.delay-5 {
+  animation-delay: 0.6s;
+}
+.delay-6 {
+  animation-delay: 0.7s;
+}
+.delay-7 {
+  animation-delay: 0.8s;
+}
+.delay-8 {
+  animation-delay: 0.9s;
+}
+.wrapbutton {
+  display: flex;
+  text-decoration: none;
+  justify-content: center;
+  padding: 3rem 0;
+}
+
+user agent stylesheet div {
+  display: block;
 }
 /* tablet here - set min/max */
 @media screen and (max-width: 1180px) and (min-width: 820px) {
@@ -590,7 +812,7 @@ a {
     height: 300px;
   }
   .loading {
-    padding-left: 750px;
+    padding-left: 650px;
   }
 
   .lns {
@@ -770,4 +992,30 @@ a {
     font-size: 50px;
     padding-left: 20px;
   }
+}
+
+/*****SUBPAGES PC********/
+.body {
+  margin-left: 500px;
+  max-width: 500px;
+}
+.heroimg {
+  max-height: 32rem;
+  width: 100%;
+  object-fit: cover;
+  z-index: 3;
+}
+
+.menuheader {
+  display: flex;
+  height: 90px;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  border-top-right-radius: 25%;
+  border-top-left-radius: 25%;
+  z-index: 2;
+  margin-top: -4%;
+  background-color: #f6f6f6;
+  position: absolute;
 }
