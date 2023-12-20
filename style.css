@@ -259,7 +259,6 @@ body {
   border-bottom-right-radius: 10px;
 }
 
-/**********************************/
 /*HEARTS*/
 .heart {
   position: relative;
@@ -408,19 +407,12 @@ a {
 .buttons:hover {
   background-color: rgb(243, 228, 243);
 }
-.checkmark,
-.menuitemicon {
-  height: 1.6rem;
-  width: 1.6rem;
-  background-color: #99e2d0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 100px;
-  transform: rotate(0deg);
-  transition-duration: 0.5s;
+.menuitemprice {
+  font-weight: bold;
 }
-
+.b {
+  font-weight: bold;
+}
 .menuitem {
   background-color: #fff;
   padding: 1rem;
@@ -431,7 +423,7 @@ a {
   overflow: hidden;
   cursor: pointer;
   animation: itemAppear 0.6s;
-  animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+  animation-timing-function: cubic-bezier(0.75, 0.82, 0.165, 1);
   animation-fill-mode: both;
   transform: scale(0);
   max-width: 100%;
@@ -535,15 +527,50 @@ h3 {
   left: 0;
   bottom: 0;
 }
-.checkmark {
+.checkmark,
+.menuitemicon {
+  height: 9rem;
+  width: 5rem;
+  background-color: #99e2d0;
   display: flex;
-  overflow-x: hidden;
-  width: 60px;
-  text-overflow: clip;
-  text-overflow: ellipsis ellipsis;
-  text-overflow: ellipsis "[..]";
+  align-items: center;
+  justify-content: center;
+  transform: rotate(180deg);
+  transition-duration: 0.15s;
 }
 
+.checkmark {
+  background-color: #99e2d0;
+  display: none;
+  overflow-x: hidden;
+  width: 80px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0%;
+  transition: all 0.5s ease-in-out;
+}
+
+section:hover .checkmark {
+  background-color: #99e2d0;
+  display: block;
+  width: 80px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0%;
+  animation: slideFromRight 0.5s forwards;
+}
+@keyframes slideFromRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* display animations */
 section {
   display: block;
 }
@@ -552,30 +579,31 @@ section {
   animation-delay: 0.1s;
 }
 .delay-1 {
-  animation-delay: 0.2s;
+  animation-delay: 0.3s;
 }
 .delay-2 {
-  animation-delay: 0.3s;
+  animation-delay: 0.5s;
 }
 
 .delay-3 {
-  animation-delay: 0.4s;
-}
-.delay-4 {
-  animation-delay: 0.5s;
-}
-.delay-5 {
-  animation-delay: 0.6s;
-}
-.delay-6 {
   animation-delay: 0.7s;
 }
-.delay-7 {
-  animation-delay: 0.8s;
-}
-.delay-8 {
+.delay-4 {
   animation-delay: 0.9s;
 }
+.delay-5 {
+  animation-delay: 0.11s;
+}
+.delay-6 {
+  animation-delay: 0.13s;
+}
+.delay-7 {
+  animation-delay: 0.15s;
+}
+.delay-8 {
+  animation-delay: 0.17s;
+}
+
 .wrapbutton {
   display: flex;
   text-decoration: none;
@@ -583,9 +611,6 @@ section {
   padding: 3rem 0;
 }
 
-user agent stylesheet div {
-  display: block;
-}
 /* tablet here - set min/max */
 @media screen and (max-width: 1180px) and (min-width: 820px) {
   header {
