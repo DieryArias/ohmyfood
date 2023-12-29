@@ -500,6 +500,22 @@ section {
   display: block;
 }
 
+.menuitemheader{
+  display: flex;
+  flex-direction: row;
+
+}
+.menuitemdescription{
+  padding-top: 20px;
+}
+.menuitemprice{
+  padding-top: 80px;
+  position: absolute;
+  top:0;
+  right:0;
+}
+
+
 .submenutitle {
   text-transform: uppercase;
   position: relative;
@@ -527,16 +543,33 @@ h3 {
   left: 0;
   bottom: 0;
 }
+
+.menuitemicon {
+  border-radius: 50%;
+  height: 2px;
+  width: 2px;
+  background-color: white;
+}
 .checkmark,
 .menuitemicon {
   height: 9rem;
   width: 5rem;
+  font-weight: bold;
   background-color: #99e2d0;
+
   display: flex;
   align-items: center;
   justify-content: center;
-  transform: rotate(180deg);
+  transform: rotate(15deg);
   transition-duration: 0.15s;
+}
+@keyframes rotateFromRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
 }
 
 .checkmark {
@@ -551,7 +584,7 @@ h3 {
   transition: all 0.5s ease-in-out;
 }
 
-section:hover .checkmark {
+.menuitem:hover .checkmark {
   background-color: #99e2d0;
   display: block;
   width: 80px;
@@ -569,6 +602,7 @@ section:hover .checkmark {
     transform: translateX(0);
   }
 }
+
 
 /* display animations */
 section {
