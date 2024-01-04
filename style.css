@@ -499,20 +499,20 @@ section {
 .menuitemheader {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  transition: transform 0.3s ease;
+  align-items:center;
+  transition: transform 1s ease;
 }
 .menuitem:hover .menuitemheader {
   transform: translateX(0px);
 }
 .menuitemdescription {
   padding-top: 20px;
-  padding-right: 10px;
-  width: calc(100%);
+  padding-right: 150px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
 
 .menuitemprice {
   padding-top: 80px;
@@ -547,6 +547,7 @@ h3 {
   margin-inline-end: 0px;
   font-weight: bold;
 }
+
 
 .submenutitle:after {
   content: "";
@@ -595,7 +596,7 @@ h3 {
   right: 0%;
   padding-top: 45px;
   padding-left: 20px;
-  transition: all 0.5s ease-in-out;
+  transition: all 1s ease-in-out;
 }
 
 .menuitem:hover .checkmark {
