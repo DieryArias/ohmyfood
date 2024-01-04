@@ -407,9 +407,7 @@ a {
 .buttons:hover {
   background-color: rgb(243, 228, 243);
 }
-.menuitemprice {
-  font-weight: bold;
-}
+
 .b {
   font-weight: bold;
 }
@@ -417,6 +415,7 @@ a {
   background-color: #fff;
   padding: 1rem;
   display: flex;
+  align-items: center;
   border-radius: 0.75rem;
   margin: 1rem 0;
   box-shadow: 0.25rem 0.25rem 1rem rgb(0 0 0 / 10%);
@@ -494,24 +493,41 @@ h2 {
 
 section {
   display: block;
-}
-
-section {
-  display: block;
+  position: relative;
 }
 
 .menuitemheader {
   display: flex;
-  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+.menuitem:hover .menuitemheader {
+  transform: translateX(0px);
 }
 .menuitemdescription {
   padding-top: 20px;
+  padding-right: 10px;
+  width: calc(100%);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
+
 .menuitemprice {
   padding-top: 80px;
   position: absolute;
   top: 0;
   right: 0;
+  transition: transform 1s ease-in;
+  font-weight: bold;
+  padding-right: 10px;
+  padding-left: 60px;
+}
+.menuitemprice:hover {
+  text-align: end;
+  right: 100px;
+  transform: translateX(1);
 }
 
 .submenutitle {
@@ -546,6 +562,9 @@ h3 {
   border-radius: 50%;
   object-position: center;
   background-color: white;
+  color: #99e2d0;
+  font-size: 20px;
+  font-weight: bolder;
   -webkit-transition: -webkit-transform 1s;
 }
 
