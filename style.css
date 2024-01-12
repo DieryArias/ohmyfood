@@ -499,7 +499,7 @@ section {
 .menuitemheader {
   display: flex;
   justify-content: space-between;
-  align-items:center;
+  align-items: center;
   transition: transform 1s ease;
 }
 .menuitem:hover .menuitemheader {
@@ -512,7 +512,6 @@ section {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-
 
 .menuitemprice {
   padding-top: 80px;
@@ -548,7 +547,6 @@ h3 {
   font-weight: bold;
 }
 
-
 .submenutitle:after {
   content: "";
   width: 3rem;
@@ -566,13 +564,22 @@ h3 {
   color: #99e2d0;
   font-size: 20px;
   font-weight: bolder;
+  cursor: pointer;
   -webkit-transition: -webkit-transform 1s;
 }
-
+/*
+.menuitemdescription:hover .menuitemicon{
+ -webkit-transform: rotate(360deg) translateZ(0);  
+}
+*/
 .menuitemicon:hover {
   -webkit-transform: rotate(360deg) translateZ(0);
 }
-
+/* 
+ .menuitemdescription:hover .checkmark .menuitemicon {
+  -webkit-transform: rotate(360deg) translateZ(0);
+}
+ */
 .checkmark,
 .menuitemicon {
   height: 60px;
