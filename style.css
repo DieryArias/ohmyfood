@@ -42,7 +42,6 @@ body {
 .overlay + .loading {
   padding-top: 60px;
 }
-
 .loading span {
   width: 35px;
   height: 35px;
@@ -495,39 +494,6 @@ section {
   display: block;
   position: relative;
 }
-/* 
-.menuitemheader {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  transition: transform 1s ease;
-}
-.menuitem:hover .menuitemheader {
-  transform: translateX(0px);
-} */
-/* .menuitemdescription {
-  padding-top: 20px;
-  padding-right: 150px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-} */
-
-/* .menuitemprice {
-  padding-top: 80px;
-  position: absolute;
-  top: 0;
-  right: 0;
-  transition: transform 1s ease-in;
-  font-weight: bold;
-  padding-right: 10px;
-  padding-left: 60px;
-}
-.menuitemprice:hover {
-  text-align: end;
-  right: 100px;
-  transform: translateX(1);
-} */
 
 .submenutitle {
   text-transform: uppercase;
@@ -557,153 +523,106 @@ h3 {
   bottom: 0;
 }
 
-/* .menuitemicon {
-  border-radius: 50%;
-  object-position: center;
-  background-color: white;
-  color: #99e2d0;
-  font-size: 20px;
-  font-weight: bolder;
-  cursor: pointer;
-  -webkit-transition: -webkit-transform 1s;
-} */
-/*
-.menuitemdescription:hover .menuitemicon{
- -webkit-transform: rotate(360deg) translateZ(0);  
-}
-*/
-/* .menuitemicon:hover {
-  -webkit-transform: rotate(360deg) translateZ(0);
-} */
-/* 
- .menuitemdescription:hover .checkmark .menuitemicon {
-  -webkit-transform: rotate(360deg) translateZ(0);
-}
- */
-/* .checkmark,
-.menuitemicon {
-  height: 60px;
-  width: 60px;
-  font-weight: bold;
-  display: flex;
-  position: absolute;
-  align-items: center;
-  justify-content: center;
-} */
-
-/* .checkmark {
-  background-color: #99e2d0;
-  display: none;
-  overflow-x: hidden;
-  width: 80px;
-  height: 100%;
-  align-items: center;
-  position: relative;
-  top: 0;
-  right: 0%;
-  padding-top: 45px;
-  padding-left: 20px;
-  transition: all 1s ease-in-out;
-} */
-
- 
 .menuItem {
-    background-color: #fff;
-    padding: 1rem;
-    display: flex;
-    border-radius: 0.75rem;
-    margin: 1rem 0;
-    box-shadow: 0.25rem 0.25rem 1rem rgb(0 0 0 / 10%);
-    overflow: hidden;
-    cursor: pointer;
-   
+  background-color: #fff;
+  padding: 1rem;
+  display: flex;
+  border-radius: 0.75rem;
+  margin: 1rem 0;
+  box-shadow: 0.25rem 0.25rem 1rem rgb(0 0 0 / 10%);
+  overflow: hidden;
+  cursor: pointer;
 }
 .menuItem__header {
-    flex: 1;
+  flex: 1;
 }
 header {
-    display: block;
+  display: block;
 }
-.menuItem__header, .menuItem__title {
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
+.menuItem__header,
+.menuItem__title {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
-
-
 
 .menuItem__price {
-    font-weight: 700;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-    padding-left: 0.5rem;
+  font-weight: 700;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding-left: 0.5rem;
 }
 
 .menuItem:hover .menuItem__confirmation {
-    margin-right: -1rem;
+  margin-right: -1rem;
 }
 .menuItem__confirmation {
-    background-color: #99e2d0;
-    margin: -1rem -5rem -1rem 1rem;
-    width: 4rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition-duration: .5s;
+  background-color: #99e2d0;
+  margin: -1rem -5rem -1rem 1rem;
+  width: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition-duration: 0.5s;
 }
 
 .menuItem:hover .menuItem__wrapIcon {
-    transform: rotate(0);
+  transform: rotate(0);
 }
 
 .menuItem__wrapIcon {
-    height: 1.6rem;
-    width: 1.6rem;
-    background-color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 100px;
-    transform: rotate(200deg);
-    transition-duration: .6s;
-}
-
-
-.menuItem__icon {
-    color: #99e2d0;
-}
-.fa, .fas {
-    font-weight: 900;
-}
-.fa, .far, .fas {
-    font-family: "Font Awesome 5 Free";
+  height: 1.6rem;
+  width: 1.6rem;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100px;
+  transform: rotate(200deg);
+  transition-duration: 0.6s;
 }
 
 .menuItem__icon {
-    color: #99e2d0;
+  color: #99e2d0;
+}
+.fa,
+.fas {
+  font-weight: 900;
+}
+.fa,
+.far,
+.fas {
+  font-family: "Font Awesome 5 Free";
 }
 
+.menuItem__icon {
+  color: #99e2d0;
+}
 
-
-.fa, .fab, .fad, .fal, .far, .fas {
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
-    display: inline-block;
-    font-style: normal;
-    font-variant: normal;
-    text-rendering: auto;
-    line-height: 1;
+.fa,
+.fab,
+.fad,
+.fal,
+.far,
+.fas {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
 }
 .fa-check:before {
-    content: "\f00c";
+  content: "\f00c";
 }
 
 .menuItem__description {
-    margin: 0;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
+  margin: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .menuitem:hover .checkmark {
@@ -715,49 +634,49 @@ header {
   top: 0;
   right: 0%;
   animation: slideFromRight 0.5s forwards;
-} 
-
-@keyframes slideFromRight {
-  from {
-    transform: translateX(100%);
-  }
-  to {
-    transform: translateX(0);
-  }
 }
 
+@keyframes menu-appear {
+  0% {
+    transform: translateY(-50%);
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 /* display animations */
 section {
   display: block;
 }
 
 .delay-0 {
-  animation-delay: 0.1s;
+  animation: menu-appear 3s 300ms forwards;
 }
 .delay-1 {
-  animation-delay: 0.3s;
+  animation: menu-appear 3s 600ms forwards;
 }
 .delay-2 {
-  animation-delay: 0.5s;
+  animation: menu-appear 3s 900ms forwards;
 }
 
 .delay-3 {
-  animation-delay: 0.7s;
+  animation: menu-appear 3s 1200ms forwards;
 }
 .delay-4 {
-  animation-delay: 0.9s;
+  animation: menu-appear 3s 1500ms forwards;
 }
 .delay-5 {
-  animation-delay: 0.11s;
+  animation: menu-appear 3s 1800ms forwards;
 }
 .delay-6 {
-  animation-delay: 0.13s;
+  animation: menu-appear 3s 2100ms forwards;
 }
 .delay-7 {
-  animation-delay: 0.15s;
+  animation: menu-appear 3s 2400ms forwards;
 }
 .delay-8 {
-  animation-delay: 0.17s;
+  animation: menu-appear 3s 2700ms forwards;
 }
 
 .wrapbutton {
