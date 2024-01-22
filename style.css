@@ -579,41 +579,18 @@ header {
   align-items: center;
   justify-content: center;
   border-radius: 100px;
-  transform: rotate(200deg);
+  transform: rotate(400deg);
   transition-duration: 0.6s;
 }
 
 .menuItem__icon {
   color: #99e2d0;
 }
-.fa,
-.fas {
-  font-weight: 900;
-}
-.fa,
-.far,
-.fas {
-  font-family: "Font Awesome 5 Free";
-}
 
 .menuItem__icon {
   color: #99e2d0;
 }
 
-.fa,
-.fab,
-.fad,
-.fal,
-.far,
-.fas {
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  display: inline-block;
-  font-style: normal;
-  font-variant: normal;
-  text-rendering: auto;
-  line-height: 1;
-}
 .fa-check:before {
   content: "\f00c";
 }
